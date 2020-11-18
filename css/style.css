@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Calibri Light';
+    src: url('../calibril.woff')
+}
+
+/* Index page classes */
+
+html {
+    background-color: black;
+    height: 100%;
+}
+
+h1, h2 {
+    color: #f2f2f2;
+}
+
+p {
+    color: #f2f2f2;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#flex-subcontainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    justify-content: flex-start;
+    /* border: 2px solid red; */
+}
+
+.halfscreen-flex {
+    flex: 1 46%;
+    flex-direction: row;
+    padding: 2%;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+
+.halfscreen-flex img {
+    width: 100%;
+    height: auto; 
+}
+
+#mars-colony-img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
