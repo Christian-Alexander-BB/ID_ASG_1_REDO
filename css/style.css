@@ -1,7 +1,13 @@
 @font-face {
     font-family: 'Calibri Light';
-    src: url('../calibril.woff')
+    src: url(../fonts/calibril.woff)
 }
+
+@font-face {
+    font-family: 'Typeface';
+    src: url(../fonts/simplifica_typeface.ttf)
+}
+
 
 /* Index page classes */
 
@@ -10,18 +16,66 @@ html {
     height: 100%;
 }
 
-h1, h2 {
-    color: #f2f2f2;
-}
-
-p {
-    color: #f2f2f2;
-}
-
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+header {
+    color: #b3e3ff;
+    text-align: center;
+    font-size: 1.9em;
+    padding-top: 8%;
+    padding-bottom: 1%;
+}
+
+#quoter-name, #quote {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-style: normal;
+    line-height: 1.6;
+    padding: 0%;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 6.5%;
+}
+
+#first-vertical-landing {
+    margin-top: -5%;
+}
+
+#mission-statement {
+    text-align: center;
+    /* margin-bottom: 20%; */
+}
+
+h1, h2 {
+    color: #b3e3ff;
+    font-family: 'Calibri Light';
+    font-weight: 100;
+    letter-spacing: 0.1em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+#intro {
+    background-image: url("../images/space.png");
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.015em;
+    font-size: 1.1em;
 }
 
 #flex-subcontainer {
@@ -31,11 +85,12 @@ body {
     align-items: center;
     align-content: space-around;
     justify-content: flex-start;
+    min-height: 300vh;
     /* border: 2px solid red; */
 }
 
 .halfscreen-flex {
-    flex: 1 46%;
+    flex: 1 36%;
     flex-direction: row;
     padding: 2%;
     margin: auto;
@@ -47,9 +102,160 @@ body {
     height: auto; 
 }
 
-#mars-colony-img {
-    width: 100%;
+.secondary-link-holder {
+    width: 25%;
     height: auto;
+    margin: auto;
+    padding: 2%;
+
+    border-radius: 2vmin;
+    border: 2px solid #b3e3ff;
+
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05em;width: 25%;
+    margin-top: 8%;
+}
+
+a.secondary-link:link {
+    color: #b3e3ff;
+    text-decoration: none;
+}
+
+a.secondary-link:hover {
+    text-decoration: underline;
+}
+
+#mars-colony {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    flex-basis: 55%;
+    height: auto;
+}
+
+#rockets-landing {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    flex-basis: 55%;
+    height: auto;
+}
+
+.video-holder {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 25%;
+    margin-left: 2%;
+    margin-right: 3.5%;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 80%;
+    z-index: 0;
+}
+
+
+figcaption {
+    color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.015em;
+    font-size: 1.1em;
+
+    text-align: center;
+    z-index: 1;
+}
+
+.video-holder > figcaption {
+    color: #b3e3ff;
+}
+
+.extra-content {
+    text-align: center;
+}
+
+#inquiries {
+    margin-bottom: 5%;
+}
+
+#social-media {
+    display: block;
+    margin-top: 20%;
+    /* margin-bottom: 10%; */
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    /* border: 2px solid red; */
+}
+
+#social-media > a {
+    margin: 1%;
+    padding-bottom: 2%;
+    font-family: "Calibri Light";
+    font-weight: bolder;
+}
+
+#social-media > a:link {
+    text-decoration: none;
+    color: #b3e3ff;
+}
+
+#social-media > a:visited {
+    text-decoration: none;
+    color: #b3e3ff;
+}
+
+#social-media > a:hover {
+    text-decoration: underline;
+    color: #f2f2f2;
+}
+
+#social-media > a:active {
+    color: #f2f2f2;
+}
+
+#mission-statement {
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    #flex-subcontainer {
+        align-items: center;
+    }
+
+    .halfscreen-flex {
+        flex: 1 100%;
+    }
+
+    .halfscreen-flex img {
+        width: 100% !important;
+    }
+
+    .video-holder {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 60%;
+        margin-left: 2%;
+        margin-right: 3.5%;
+    }
+    
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 80%;
+    }
 }
 
 
