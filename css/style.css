@@ -9,38 +9,18 @@
 }
 
 
-/* Index page classes */
+/* Universal Classes And Styling */
 
 html {
     background-color: black;
     height: 100%;
+    
+    scroll-snap-type: y proximity;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header {
-    color: #b3e3ff;
-    text-align: center;
-    font-size: 1.9em;
-    padding-top: 8%;
-    padding-bottom: 1%;
-}
-
-#quoter-name, #quote {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5em;
-    font-style: normal;
-    line-height: 1.6;
-    padding: 0%;
-    text-align: center;
-    padding-left: 5%;
-    padding-right: 6.5%;
-}
+/* body {
+    scroll-snap-type: y mandatory;
+} */
 
 #first-vertical-landing {
     margin-top: -5%;
@@ -62,14 +42,6 @@ h2 {
     font-size: 2em;
 }
 
-#intro {
-    background-image: url("../images/space.png");
-    min-height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 p {
     color: #f2f2f2;
     font-family: 'Open Sans', sans-serif;
@@ -78,28 +50,43 @@ p {
     font-size: 1.1em;
 }
 
-#flex-subcontainer {
+.flex-container {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
     align-content: space-around;
     justify-content: flex-start;
-    min-height: 300vh;
+    min-height: 100vh;
     /* border: 2px solid red; */
+
+    /* scroll-snap-align: start; */
 }
 
-.halfscreen-flex {
-    flex: 1 36%;
+.snap-point {
+    scroll-snap-align: center;
+}
+
+.flex-item {
+    flex: 1 30%;
     flex-direction: row;
     padding: 2%;
     margin: auto;
     /* border: 2px solid red; */
+
+    /* scroll-snap-align: start;*/
 }
 
-.halfscreen-flex img {
+.flex-item img {
     width: 100%;
-    height: auto; 
+    height: auto;
+}
+
+.image-beside-text {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    flex-basis: 55%;
+    height: auto;
 }
 
 .secondary-link-holder {
@@ -114,7 +101,8 @@ p {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    letter-spacing: 0.05em;width: 25%;
+    letter-spacing: 0.05em;
+    width: 25%;
     margin-top: 8%;
 }
 
@@ -127,18 +115,14 @@ a.secondary-link:hover {
     text-decoration: underline;
 }
 
-#mars-colony {
-    padding-top: 0%;
-    padding-bottom: 0%;
-    flex-basis: 55%;
-    height: auto;
-}
+figcaption {
+    color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.015em;
+    font-size: 1.1em;
 
-#rockets-landing {
-    padding-top: 0%;
-    padding-bottom: 0%;
-    flex-basis: 55%;
-    height: auto;
+    text-align: center;
 }
 
 .video-holder {
@@ -148,6 +132,10 @@ a.secondary-link:hover {
     padding-top: 25%;
     margin-left: 2%;
     margin-right: 3.5%;
+}
+
+.video-holder > figcaption {
+    color: #b3e3ff;
 }
 
 .video {
@@ -161,24 +149,55 @@ a.secondary-link:hover {
     z-index: 0;
 }
 
-
-figcaption {
-    color: #f2f2f2;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.8;
-    letter-spacing: 0.015em;
-    font-size: 1.1em;
-
+.topnav {
     text-align: center;
-    z-index: 1;
-}
-
-.video-holder > figcaption {
-    color: #b3e3ff;
 }
 
 .extra-content {
     text-align: center;
+}
+
+
+/* Index.html IDs */
+
+
+#intro {
+    background-image: url("../images/space.png");
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#starlink-description {
+    flex: 1 100%;
+    padding-right: 12%;
+    padding-left: 12%;
+}
+
+#page-header {
+    color: #b3e3ff;
+    text-align: center;
+    font-size: 4.5em;
+    padding-top: 8%;
+    padding-bottom: 1%;
+}
+
+#quoter-name, #quote {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    font-style: normal;
+    line-height: 1.6;
+    padding: 0%;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 6.5%;
+}
+
+#videos-description {
+    flex: 1 100%;
+    text-align: center;
+    font-size: 1.35em;
 }
 
 #inquiries {
@@ -188,11 +207,9 @@ figcaption {
 #social-media {
     display: block;
     margin-top: 20%;
-    /* margin-bottom: 10%; */
     text-align: center;
     margin: auto;
     width: 100%;
-    /* border: 2px solid red; */
 }
 
 #social-media > a {
@@ -221,20 +238,16 @@ figcaption {
     color: #f2f2f2;
 }
 
-#mission-statement {
-    text-align: center;
-}
-
 @media screen and (max-width: 1000px) {
-    #flex-subcontainer {
+    .flex-container {
         align-items: center;
     }
 
-    .halfscreen-flex {
+    .flex-item {
         flex: 1 100%;
     }
 
-    .halfscreen-flex img {
+    .flex-item img {
         width: 100% !important;
     }
 
@@ -256,9 +269,26 @@ figcaption {
         width: 100%;
         height: 80%;
     }
+
+    #starlink-description {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
 }
 
+/*
 
+#mission-statement {
+    text-align: center;
+}
 
+#videos-description {
+    flex: 1 100%;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.5em;
+}
 
-
+#videos-description-text {
+    margin-bottom: 0;
+}
