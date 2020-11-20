@@ -4,7 +4,7 @@
         <meta charset UTF-8>
         <meta name="SpaceX Homepage" content="About SpaceX">
 
-        <title>SpaceX - Home</title> 
+        <title>Spacex</title> 
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
@@ -12,13 +12,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
-
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <nav class="topnav">
+        <nav class="topnav underline">
+            <a class="navbar-brand" href="/">
+                <!-- <div class="logo-image">
+                      <img src="images/spacex_logo.png" class="img-fluid">
+                </div> -->
+          </a>
             <a href="mars.html">Journey To Mars</a>
             <a href="spacecraft.html">Our Spacecraft</a>
             <a href="starlink.html">Starlink Internet</a>
@@ -45,7 +49,7 @@
         <main>
             <article class="flex-container snap-point" id="mission-to-mars">
                 <div class="flex-item">
-                    <h2>Mission To Mars And Beyond</h2>
+                    <h2 class="underline"><a href="mars.html">Mission To Mars And Beyond</a></h2>
 
                     <p class="main-text" id="mission-to-mars-text">
                         Our largest goal is to make humanity an interplanetary species. The first step in doing this is by colonizing Mars,
@@ -54,7 +58,7 @@
                         Earth.
                     </p>
                     
-                    <div class="secondary-link-holder">
+                    <div class="secondary-link-holder underline">
                         <a href="mars.html" class="secondary-link" id="mars-link">Find Out More</a>
                     </div>
                 </div>
@@ -72,7 +76,7 @@
                 </figure>
                 
                 <div class="flex-item">
-                    <h2>Reusable Rockets</h2>
+                    <h2 class="underline"><a href="spacecraft.html">Reusable Rockets</a></h2>
 
                     <p class="main-text">
                         Traditionally, launch vehicles like boosters need to be repaired or rebuilt, making them non-reusable and expensive.
@@ -80,7 +84,7 @@
                         period of time. 
                     </p>
                     
-                    <div class="secondary-link-holder">
+                    <div class="secondary-link-holder underline">
                         <a href="spacecraft.html" class="secondary-link" id="rocket-link">Find Out More</a>
                     </div>
                 </div>                
@@ -88,7 +92,7 @@
 
             <article class="flex-container snap-point">
                 <div class="flex-item" id="starlink-description">
-                    <h2>Starlink</h2>
+                    <h2 class="underline"><a href="starlink.html">Starlink</a></h2>
 
                     <p>
                         With more than 800 satellites working together in low earth orbit, Starlink will provide fast internet to
@@ -125,17 +129,15 @@
             </section>
         </main>
 
-        <aside id="inquiries">
-            <p class="extra-content">
+        <aside class="inquiries">
+            <p>
                 For media enquiries, please reach out to media@spacex.com on email.
-            </p>
-
-            <p class="extra-content">
+                <br>
                 For more information about trademarks, copyrights and other IP at SpaceX, click <a href=https://www.spacex.com/trademark>here</a>
             </p>
         </aside>
-            
-        <nav id="social-media">
+        
+        <nav class="snap-point underline" id="social-media">
             <a href="">&#169SpaceX2020</a>
             <a href="https://twitter.com/spacex">Twitter</a>
             <a href="https://www.youtube.com/spacex">YouTube</a>
