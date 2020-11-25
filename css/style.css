@@ -27,6 +27,16 @@ h1, h2 {
     letter-spacing: 0.1em;
 }
 
+h1 {
+    color: #b3e3ff;
+
+    text-align: center;
+    font-size: 4.5em;
+
+    padding-top: 10%;
+    padding-bottom: 1%;
+}
+
 
 h2 {
     font-size: 2em;
@@ -42,6 +52,25 @@ figcaption {
     line-height: 1.8;
     letter-spacing: 0.015em;
     text-align: center;
+}
+
+
+table {
+    color: #f2f2f2;
+
+    width: 100%;
+    border-collapse: collapse;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+
+    line-height: 1.8;
+    letter-spacing: 0.015em;
+}
+
+th, td {
+    border: 1px solid #b3e3ff;
+    padding: 1%;
 }
 
 
@@ -169,7 +198,7 @@ h2 > a {
 
 
 .snap-point {
-    scroll-snap-align: end; /* Sets up the snap points and how snapping works. Here, the scroll bar snaps to the end of the html block */
+    scroll-snap-align: start; /* Sets up the snap points and how snapping works. Here, the scroll bar snaps to the end of the html block */
 }
 
 
@@ -211,13 +240,7 @@ h2 > a {
 
     text-align: center;
     z-index: 1;
-
-    /* border: 2px solid red; */
 }
-
-/* .topnav > div {
-    border: 2px solid red;
-} */
 
 .topnav > div > a {
     position: relative;
@@ -249,6 +272,7 @@ h2 > a {
 }
 
 
+/* The following code customized the scroll bar */
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -277,17 +301,7 @@ h2 > a {
     background-size: cover;
 
     min-height: 100vh;
-    border: 2px solid black;
-}
-
-#page-header {
-    color: #b3e3ff;
-
-    text-align: center;
-    font-size: 4.5em;
-
-    padding-top: 10%;
-    padding-bottom: 1%;
+    border: 1px solid black;
 }
 
 #inquiries {
@@ -369,6 +383,61 @@ h2 > a {
 }
 
 
+/* spacecraft.html IDs */
+
+
+#falcon-9 {
+    background-image: url("../images/falcon_9.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 100vh;
+    border: 1px solid black;
+
+    text-align: center;
+}
+
+
+#falcon-9-title {
+    font-size: 2.7em;
+    font-weight: 100;
+    letter-spacing: 0.4em;
+
+    padding-top: 70vh;
+    padding-left: 1.5vw;
+}
+
+
+#falcon-9-desc {
+    font-weight: 100;
+    letter-spacing: 0.12em;
+
+    line-height: 0;
+}
+
+
+#falcon-9-takeoff {
+    background-image: url("../images/falcon_9_blastoff.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#table-stats > h2 {
+    padding-left: 35%;
+}
+
+#falcon-9-takeoff > div {   
+    padding-bottom: 45vh;
+}
+
+#description {
+    padding-left: 10%;
+    text-align: left;
+}
+
 
 @media screen and (max-width: 586px) {
     .flex-container {
@@ -409,5 +478,14 @@ h2 > a {
     #starlink-description {
         padding-left: 2%;
         padding-right: 2%;
+    }
+
+    #falcon-9-desc {
+        line-height: 1.1em;
+    }
+
+    #description > p {
+        color: black;
+        font-weight: bold;
     }
 }
