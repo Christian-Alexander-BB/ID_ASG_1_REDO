@@ -1,3 +1,5 @@
+/* Custom Fonts */
+
 @font-face {
     font-family: 'Calibri Light';
     src: url(../fonts/calibril.woff)
@@ -8,60 +10,70 @@
     src: url(../fonts/simplifica_typeface.ttf)
 }
 
-
 /* Universal Classes And Styling */
 
 html {
+    scroll-snap-type: y proximity; /* Activates scroll-snapping in the page, which allows users to "snap" to certain areas when scrolling */
     background-color: black;
-    height: 100%;
-    
-    scroll-snap-type: y proximity;
 }
 
-#first-vertical-landing {
-    margin-top: -5%;
-}
 
 h1, h2 {
     color: #b3e3ff;
+
     font-family: 'Calibri Light';
     font-weight: 100;
+
     letter-spacing: 0.1em;
 }
+
 
 h2 {
     font-size: 2em;
 }
 
-p {
+
+figcaption {
     color: #f2f2f2;
+
     font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+
     line-height: 1.8;
     letter-spacing: 0.015em;
-    font-size: 1.1em;
+    text-align: center;
 }
 
+
+p {
+    color: #f2f2f2;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+
+    line-height: 1.8;
+    letter-spacing: 0.015em;
+}
+
+
+/* The following 3 blocks set up flex containers and flex items */
 .flex-container {
     display: flex;
     width: 100%;
+
     flex-wrap: wrap;
     align-items: center;
     align-content: space-around;
     justify-content: center;
-    min-height: 100vh;
-    /* border: 2px solid red; */
-}
-
-.snap-point {
-    scroll-snap-align: end;
+    min-height: 100vh; /* Makes each section exactly the height of the viewport */
 }
 
 .flex-item {
-    flex: 1 36%;
+    flex: 1 36%; /* Default section is 55% image, 36% words, and 2% padding for each item */
     flex-direction: row;
+
     padding: 2%;
     margin: auto;
-    /* border: 2px solid red; */
 }
 
 .flex-item img {
@@ -69,53 +81,65 @@ p {
     height: auto;
 }
 
+
 .image-beside-text {
+    /* Sets up what happens if image is beside text (default) */
+    flex-basis: 55%;
+
     padding-top: 0%;
     padding-bottom: 0%;
-    flex-basis: 55%;
+    
     height: auto;
 }
 
+
+/* The following 5 blocks of .underline > a sets up the line animation when hovering and attributes of the <a> tag. 
+    Referenced in README file */
 .underline > a:link {
+    /* Default color of words */
+
     color: #b3e3ff;
     text-decoration: none;
 }
 
 .underline > a:after {
-    content: '';
-    position: absolute;
-    width: 0; 
-    height: 0.1vmin;
+    /* "after" inserts something after the selected content. In this case, the <a> tag */
+
+    content: ''; /* Displays nothing after the words in the <a> tag. */ 
     display: block;
-    margin-top: 1px;
+    position: absolute;
+
+    width: 0; 
+    height: 0.1vmin; /* Height of the line */
+
+    margin-top: 1px; /* Sets how far the line is from the words */
     right: 0;
     background: #fff;
-    transition: width .2s ease;
-    -webkit-transition: width .2s ease;
+    transition: width .25s ease;
 }
 
 .underline > a:visited {
-    text-decoration: none;
     color: #b3e3ff;
+    text-decoration: none;
 }
 
 .underline > a:hover {
     color: #f2f2f2;
-    transition-duration: 0.35s;
+    transition-duration: 0.35s; /* Sets a regular transition effect between default color and new color */
 }
 
 .underline > a:hover:after {
+    /* The bottom attributes are inserted after the words in the <a> tag when hovering */
+
     color: #f2f2f2;
+    background: #fff;
+
     width: 100%;
     left: 0;
-    background: #fff;
 }
 
-h2 > a {
-    font-size: 1em;
-    position: relative;
-}
 
+/* The following block sets up the buttons, specifically "Find Out More" */
 .secondary-link-holder {
     width: 30%;
     height: auto;
@@ -128,35 +152,36 @@ h2 > a {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+
     letter-spacing: 0.05em;
     margin-top: 8%;
 }
 
+
+/* The following 2 blocks make links relative to .underline > a, allowing the animations to activate */
 a.secondary-link {
     position: relative;
 }
 
-figcaption {
-    color: #f2f2f2;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.8;
-    letter-spacing: 0.015em;
-    font-size: 1.1em;
-
-    text-align: center;
+h2 > a {
+    position: relative;
 }
 
+
+.snap-point {
+    scroll-snap-align: end; /* Sets up the snap points and how snapping works. Here, the scroll bar snaps to the end of the html block */
+}
+
+
+/* The following 3 blocks set up the positioning and styling of videos */
 .video-holder {
     position: relative;
     overflow: hidden;
+
     width: 100%;
     padding-top: 25%;
     margin-left: 2%;
     margin-right: 3.5%;
-}
-
-.video-holder > figcaption {
-    color: #b3e3ff;
 }
 
 .video {
@@ -170,107 +195,182 @@ figcaption {
     z-index: 0;
 }
 
+.video-holder > figcaption {
+    color: #b3e3ff;
+}
+
+
+/* The following 3 blocks set up the top navigation bar */
 .topnav {
     display: inline-flex;
-
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-
     width: 100%;
 
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+
     text-align: center;
-    margin: auto;
-    /* background-color: #f2f2f2; */
+    z-index: 1;
+
     /* border: 2px solid red; */
-    /* height: 5px */
 }
 
-.topnav > a {
+/* .topnav > div {
+    border: 2px solid red;
+} */
+
+.topnav > div > a {
     position: relative;
-    margin-left: 5%;
-    margin-right: 5%;
-
-    /* font-weight: bold; */
+    padding: 0% !important;
+    margin: 0 !important;
+    flex-basis: 2%;
+    font-size: 1.5em;
     font-family: "Calibri Light";
-    font-size: 3vh;
-
-    top: 1.5vmax;
 }
 
-.inquiries {
+.logo {
+    flex-basis: 1%;
+    /* border: 2px solid red; */
+
+    margin: 0;
+    padding-left: 10%;
+
+    z-index: 0;
+}
+
+
+.logo-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12vw !important;
+    z-index: 0;
+
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(23, 25, 32);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #45a2d8;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #63b0dd;
+}
+
+
+/* IDs used in multiple pages */
+
+
+#intro {
+    background-image: url("../images/space.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 100vh;
+    border: 2px solid black;
+}
+
+#page-header {
+    color: #b3e3ff;
+
+    text-align: center;
+    font-size: 4.5em;
+
+    padding-top: 10%;
+    padding-bottom: 1%;
+}
+
+#inquiries {
     margin-bottom: 8%;
     text-align: center;
     margin-top: 5%;
 }
 
 
-/* Index.html IDs */
+/* index.html IDs */
 
-
-#intro {
-    background-image: url("../images/space.png");
-    min-height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* border: 2px solid red; */
-}
 
 #starlink-description {
     flex: 1 100%;
+
     padding-right: 12%;
     padding-left: 12%;
 }
 
-#page-header {
-    color: #b3e3ff;
-    text-align: center;
-    font-size: 4.5em;
-    padding-top: 10%;
-    padding-bottom: 1%;
+#about {
+    background-image: url("../images/takeoff_actual.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 
 #quoter-name, #quote {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
     font-style: normal;
+
     line-height: 1.7;
-    padding: 0%;
     text-align: center;
+
+    padding: 0%;
     padding-left: 5%;
     padding-right: 6.5%;
 }
 
+
 #videos-description {
     flex: 1 100%;
+
     text-align: center;
     font-size: 1.35em;
 }
 
+
 #social-media {
     display: block;
-    margin-top: 20%;
-    text-align: center;
-    margin: auto;
+
     width: 100%;
+    margin-top: 20%;
+    margin: auto;
+    text-align: center;
+    
 }
+
 
 #social-media > a {
     position: relative;
+
     margin: 1%;
     padding-bottom: 2%;
+
     font-family: "Calibri Light";
     font-weight: bolder;
 }
 
-#spacex-logo {
-    width: 5px;
+
+#img-fluid {
+    width: 10%;
     height: auto;
+    float: left;
+    
+    margin-top: 0;
+    z-index: 0;
 }
 
-@media screen and (max-width: 1000px) {
+
+
+@media screen and (max-width: 586px) {
     .flex-container {
         align-items: center;
     }
@@ -300,6 +400,10 @@ figcaption {
         right: 0;
         width: 100%;
         height: 80%;
+    }
+
+    .secondary-link-holder {
+        display: none;
     }
 
     #starlink-description {

@@ -17,19 +17,26 @@
     </head>
 
     <body>
-        <nav class="topnav underline">
-            <a class="navbar-brand" href="/">
-                <!-- <div class="logo-image">
-                      <img src="images/spacex_logo.png" class="img-fluid">
-                </div> -->
-          </a>
-            <a href="mars.html">Journey To Mars</a>
-            <a href="spacecraft.html">Our Spacecraft</a>
-            <a href="starlink.html">Starlink Internet</a>
+        <nav class="topnav">
+            <figure class="flex-item logo">
+                <img src="images/spacex_logo.png" class="logo-image">
+            </figure>
+
+            <div class="flex-item underline">
+                <a href="mars.html">Journey To Mars</a>
+            </div>
+
+            <div class="flex-item underline">
+                <a href="spacecraft.html">Our Spacecraft</a>
+            </div>
+
+            <div class="flex-item underline">
+                <a href="starlink.html">Starlink Internet</a>
+            </div>
         </nav>
 
         <header class="snap-point" id="intro">
-            <h1 id="page-header">SpaceX - Mission</h1>
+            <h1 id="page-header">SpaceX</h1>
 
             <p id="quote">
                 “You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring 
@@ -47,6 +54,25 @@
         </header>
 
         <main>
+            <article class="flex-container snap-point" id="about">
+                <div class="flex-item"></div>
+                <div class="flex-item">
+                    <h2>Our Objective</h2>
+
+                    <p>
+                        At SpaceX, we develop bleeding-edge rocket technologies to take machines, and eventually humans, to space.
+                        We are the first company to have a rocket that can land land vertically and be reused, the first private company
+                        to send humans to the International Space Station, the first private company to launch something to orbit the sun,
+                        and many more.
+                        <br><br>
+                        Since Appollo 11, interest in space exploration has been declining. Less and less people started to look to the 
+                        stars with awe. Here, we hope to reignite the spark that is outer space. Our ultimate goal is to make space
+                        travel available to almost anyone and make space exploration exciting for the public again. 
+                    </p>
+
+                </div>
+            </article>
+
             <article class="flex-container snap-point" id="mission-to-mars">
                 <div class="flex-item">
                     <h2 class="underline"><a href="mars.html">Mission To Mars And Beyond</a></h2>
@@ -64,14 +90,14 @@
                 </div>
 
                 <figure class="flex-item image-beside-text">
-                    <img src="images/spacex_mars_colony.png" alt="space x mars colony" id="mars-colony-img">
+                    <img src="images/spacex_mars_colony.png" alt="space x mars colony">
                     <figcaption>Concept Art - Mars Colony</figcaption>
                 </figure>
             </article>
 
             <article class="flex-container snap-point" id="reusable-rockets">
                 <figure class="flex-item image-beside-text">
-                    <img src="images/landing_rockets.gif" alt="space x rockets landing" id="img-rocket-landing">
+                    <img src="images/landing_rockets.gif" alt="space x rockets landing">
                     <figcaption>SpaceX Falcon 9 Rockets Landing</figcaption>
                 </figure>
                 
@@ -119,17 +145,17 @@
 
                 <figure class="flex-item video-holder">
                     <figcaption>First Falcon 9 Vertical Landing Milestone</figcaption>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/brE21SBO2j8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video" id="vid-1"></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/brE21SBO2j8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
                 </figure>
 
                 <figure class="flex-item video-holder">
                     <figcaption>Our Plan To Go To Mars</figcaption> 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lhydEz-ja1g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video" id="vid-2"></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lhydEz-ja1g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
                 </figure>
             </section>
         </main>
 
-        <aside class="inquiries">
+        <aside id="inquiries">
             <p>
                 For media enquiries, please reach out to media@spacex.com on email.
                 <br>
