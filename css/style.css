@@ -27,6 +27,7 @@ h1, h2, h3 {
     letter-spacing: 0.1em;
 }
 
+
 h1 {
     color: #b3e3ff;
 
@@ -71,8 +72,8 @@ table {
     letter-spacing: 0.015em;
 }
 
-th, td {
-    border: 1px solid #b3e3ff;
+td {
+    /* border: 1px solid #b3e3ff; */
     padding: 1%;
 }
 
@@ -289,6 +290,28 @@ h2 > a {
 }
 
 
+.red > div > h2, .red > div > h3 {
+    color: rgb(223, 23, 23);
+}
+
+#red-table > tr > td{
+    border: 1px solid rgb(223, 23, 23);
+    padding: 1%;
+}
+
+.red > a:link {
+    color: rgb(223, 23, 23);
+}
+
+.red > a:visited {
+    color: rgb(223, 23, 23);
+}
+
+.red > a:hover {
+    color: #f2f2f2;
+}
+
+
 /* The following code customized the scroll bar */
 ::-webkit-scrollbar {
     width: 12px;
@@ -408,7 +431,7 @@ h2 > a {
 }
 
 
-/* spacecraft.html IDs */
+/* falcon-9.html IDs */
 
 
 #falcon-9 {
@@ -429,8 +452,10 @@ h2 > a {
     font-weight: 100;
     letter-spacing: 0.4em;
 
-    padding-top: 70vh;
+    padding-top: 75vh;
     padding-left: 1.5vw;
+
+    line-height: 0;
 }
 
 
@@ -438,7 +463,7 @@ h2 > a {
     font-weight: 100;
     letter-spacing: 0.12em;
 
-    line-height: 0;
+    line-height: 1.3;
 }
 
 
@@ -469,6 +494,57 @@ h2 > a {
 
 #falcon-9-video-holder > .video {
     width: 100%;
+}
+
+
+/* falcon-heavy.html IDs */
+
+
+#falcon-heavy {
+    background-image: url("../images/falcon_heavy_cover_actual.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 100vh;
+    border: 1px solid black;
+
+    text-align: center;
+}
+
+#falcon-heavy-title {
+    font-size: 2.7em;
+    font-weight: 100;
+    letter-spacing: 0.4em;
+
+    padding-top: 70vh;
+    padding-right: 1.5vw;
+
+    color: rgb(221, 26, 26);
+
+    line-height: 0;
+}
+
+#falcon-heavy-desc {
+    font-weight: 100;
+    letter-spacing: 0.12em;
+
+    padding-right: 0.7vw;
+
+    line-height: 1.2;
+
+    color: rgb(172, 0, 0);
+}
+
+#falcon-heavy-takeoff {
+    background-image: url("../images/falcon_heavy_new.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#falcon-heavy-takeoff > div {
+    padding-bottom: 45vh;
 }
 
 
@@ -513,7 +589,7 @@ h2 > a {
         padding-right: 2%;
     }
 
-    #falcon-9-desc {
+    #falcon-desc {
         line-height: 1.1em;
     }
 
