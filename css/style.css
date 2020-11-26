@@ -84,7 +84,7 @@ p {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1em;
 
-    line-height: 1.8;
+    line-height: 2;
     letter-spacing: 0.015em;
 }
 
@@ -294,11 +294,6 @@ h2 > a {
     color: rgb(223, 23, 23);
 }
 
-#red-table > tr > td{
-    border: 1px solid rgb(223, 23, 23);
-    padding: 1%;
-}
-
 .red > a:link {
     color: rgb(223, 23, 23);
 }
@@ -338,6 +333,10 @@ h2 > a {
     border-left: 2px solid #f2f2f2;
 }
 
+
+.overscroll-img {
+    padding-top: 4.5%;
+}
 
 /* IDs used in multiple pages */
 
@@ -546,6 +545,7 @@ h2 > a {
 #falcon-heavy-takeoff > div {
     padding-bottom: 45vh;
 }
+
 
 
 @media screen and (max-width: 700px) {
