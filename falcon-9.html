@@ -18,21 +18,23 @@
 
     <body>
         <nav class="topnav snap-point">
-            <figure class="flex-item logo">
-                <a href="index.html"><img src="images/spacex_logo.png" class="logo-image"></a>
-            </figure>
-
-            <div class="flex-item underline">
-                <a href="mars.html">Journey To Mars</a>
-            </div>
-
-            <div class="flex-item underline">
-                <a href="spacecraft.html">Our Spacecraft</a>
-            </div>
-
-            <div class="flex-item underline">
-                <a href="starlink.html">Starlink Internet</a>
-            </div>
+            <nav class="topnav snap-point">
+                <figure class="flex-item logo">
+                    <a href="index.html"><img src="images/spacex_logo.png" class="logo-image"></a>
+                </figure>
+    
+                <div class="flex-item underline">
+                    <a href="mars.html" target="_blank">Journey To Mars</a>
+                </div>
+    
+                <div class="flex-item underline">
+                    <a href="falcon-9.html" target="_blank">Our Spacecraft</a>
+                </div>
+    
+                <div class="flex-item underline">
+                    <a href="starlink.html" target="_blank">Starlink Internet</a>
+                </div>
+            </nav>
         </nav>
 
         <header class="snap-point" id="falcon-9">
@@ -188,6 +190,7 @@
                     </figure>
 
                     <h3>Dragon</h3>
+
                     <p>
                         Dragon is capable of carrying up to 7 people and/or cargo in the spacecraft’s pressurized section. In addition, 
                         Dragon can carry cargo in the spacecraft’s unpressurized trunk, which can also accommodate secondary payloads.
@@ -197,10 +200,35 @@
                         <img src="images/dragon_actual.png">
                         <figcaption>Falcon 9's Dragon Module</figcaption>
                     </figure>
+                </div>
+            </article>
 
-                    </p>
+            <article class="flex-container snap-point">
+                <div class="flex-item" style="flex-basis: 100%;">
+
+                </div>
+                <div class="flex-item video-holder" id="falcon-9-video-holder">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4TXCZG_NEY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
                 </div>
             </article>
         </main>
+
+        <aside id="inquiries">
+            <p>
+                For media enquiries, please reach out to media@spacex.com on email.
+                <br>
+                For more information about trademarks, copyrights and other IP at SpaceX, click <a href=https://www.spacex.com/trademark>here</a>
+            </p>
+        </aside>
+        
+        <footer class="snap-point underline" id="social-media">
+            <a href="">&#169SpaceX2020</a>
+            <a href="https://twitter.com/spacex" target="_blank">Twitter</a>
+            <a href="https://www.youtube.com/spacex" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/spacex/" target="_blank">Instagram</a>
+            <a href="https://www.flickr.com/photos/spacex" target="_blank">Flickr</a>
+            <a href="https://linkedin.com/company/spacex" target="_blank">LinkedIn</a>
+            <a href="https://www.spacex.com/media/privacy_policy_spacex.pdf" target="_blank">Privacy Policy</a>
+        </footer>
     </body>
 </html>

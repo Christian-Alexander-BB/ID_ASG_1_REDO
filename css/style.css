@@ -310,7 +310,7 @@ h2 > a {
 
 .overscroll {
     overflow: scroll; 
-    height: 100vh; 
+    height: 90vh; 
     flex-basis: 40%; 
     border-left: 2px solid #f2f2f2;
 }
@@ -461,6 +461,14 @@ h2 > a {
 #description {
     padding-left: 10%;
     text-align: left;
+}
+
+#falcon-9-video-holder {
+    padding-top: 51%;
+}
+
+#falcon-9-video-holder > .video {
+    width: 100%;
 }
 
 
