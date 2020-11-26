@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset UTF-8>
+        <meta name="SpaceX Spacecraft" content="Spacecraft">
+
+        <title>Spacecraft</title> 
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="topnav snap-point">
+            <nav class="topnav snap-point">
+                <figure class="flex-item logo">
+                    <a href="index.html"><img src="images/spacex_logo.png" class="logo-image"></a>
+                </figure>
+    
+                <div class="flex-item underline">
+                    <a href="mars.html" target="_blank">Journey To Mars</a>
+                </div>
+    
+                <div class="flex-item underline">
+                    <a href="falcon-9.html" target="_blank">Our Spacecraft</a>
+                </div>
+    
+                <div class="flex-item underline">
+                    <a href="starlink.html" target="_blank">Starlink Internet</a>
+                </div>
+            </nav>
+        </nav>
+
+        <header class="snap-point" id="falcon-9">
+            <h1 id="falcon-9-title">FALCON 9</h1>
+
+            <h2 id="falcon-9-desc">FIRST ORBITAL CLASS ROCKET CAPABLE OF REFLIGHT</h2>
+        </header>
+
+        <main>
+            <article class="flex-container snap-point" id="falcon-9-takeoff">
+                <div class="flex-item" id="table-stats">
+                    <h2>Statistics</h2>
+                    
+                    <table id="falcon-9-stats">
+                        <tr>
+                            <td>HEIGHT</td>
+                            <td>70 m / 229.6 ft</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>DIAMETER</td>
+                            <td>3.7 m / 12ft</td>
+                        </tr>
+
+                        <tr>
+                            <td>MASS</td>
+                            <td>549,054 kg / 1,207,920 lb</td>
+                        </tr>
+
+                        <tr>
+                            <td>PAYLOAD TO LOW-EARTH ORBIT</td>
+                            <td>22,800 kg / 50,265 lb</td>
+                        </tr>
+
+                        <tr>
+                            <td>PAYLOAD TO GEOSTATIONARY TRANSFER ORBIT</td>
+                            <td>8,300 kg / 18,300 lb</td>
+                        </tr>
+
+                        <tr>
+                            <td>PAYLOAD TO MARS</td>
+                            <td>4,020 kg / 8,860 lb</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="flex-item" id="description">
+                    <h2>Description</h2>
+
+                    <p>
+                        Falcon 9 is a reusable, two-stage rocket designed and manufactured by SpaceX for the reliable and safe 
+                        transport of people and payloads into Earth orbit and beyond. Falcon 9 is the world’s first orbital class 
+                        reusable rocket. Reusability allows SpaceX to refly the most expensive parts of the rocket, which in turn 
+                        drives down the cost of space access. Currently, we are using Falcon 9 v1.2.
+                    </p>
+                </div>
+            </article>
+
+            <article class="flex-container snap-point">
+                <figure class="flex-item tall-image">
+                    <img src="images/falcon_9_first_stage.png" alt="falcon 9 first stage after reentry and landing">
+                    <figcaption>Falcon 9 First Stage After Reentry and Landing</figcaption>
+                </figure>
+
+                <div class="flex-item">
+                    <h2>Stage 1</h2>
+                    <br><br>
+
+                    <h3>Description</h3>
+
+                    <p>
+                        The current version of Falcon 9’s first stage incorporates nine Merlin engines and aluminum-lithium alloy tanks 
+                        containing liquid oxygen and rocket-grade kerosene (RP-1) propellant. Falcon 9 v1.2 generates more than 
+                        1.7 million pounds (~771107 kg) of thrust at sea level.
+                        <br><br>
+                    </p>
+
+                    <h3>Landing Legs</h3>
+
+                    <p>
+                        Currently, Falcon 9 has the only first stage with landing legs. The Falcon 9 first stage is equipped with four 
+                        landing legs made of state-of-the-art carbon fiber with aluminum honeycomb. Placed symmetrically around the 
+                        base of the rocket, they are stowed at the base of the vehicle and deploy just prior to landing.
+                    </p>
+                </div>
+            </article>
+
+            <article class="flex-container snap-point">
+                <div class="flex-item">
+                    <h2>Stage 2</h2>
+                    <br><br>
+                    
+                    <h3>Description</h3>
+
+                    <p>
+                        The second stage, powered by a single Merlin Vacuum Engine, delivers Falcon 9’s payload to the desired orbit. 
+                        The second stage engine ignites a few seconds after stage separation, and can be restarted multiple times to 
+                        place multiple payloads into different orbits. It has a burn time of 397 seconds and thrust of 981 kiloNewtons
+                         (220 pound-force).
+                        <br><br>
+                    </p>
+
+                    <h3>Going Back To Earth</h3>
+
+                    <p>
+                        On low-orbit flights, atmospheric drag pulls stage 2 back down to earth and it falls like a regular spaceflight
+                        rocket booster. Sometimes, to prevent the creation of space debris, the second stage is reignited to slow it
+                        down and make it fall back to earth's atmosphere.
+                    </p>
+                </div>
+
+                <figure class="flex-item tall-image">
+                    <img src="images/transition_stage_actual.png" alt="second stage separating from first stage" id="separation">
+                    <figcaption>Second Stage Separation (Concept Art)</figcaption>
+                </figure>
+            </article>
+
+            <article class="flex-container snap-point">
+                <div class="flex-item overscroll">
+                    <h2>Interstage</h2>
+
+                    <p>
+                        The interstage is a composite structure that connects the first and second stages, and houses the 
+                        pneumatic pushers that allow the first and second stage to separate during flight.
+                        <br><br>
+                        Falcon 9 is equipped with four hypersonic grid fins positioned at the base of the interstage. 
+                        They orient the rocket during reentry by moving the center of pressure, similar to how airplane flaps change
+                        the direction of the plane.
+                    </p>
+
+                    <figure>
+                        <img src="images/interstage_new.png">
+                        <figcaption>Falcon 9's Interstage</figcaption>
+                    </figure>
+                </div>
+
+                <div class="flex-item" style="flex-basis: 5%;"></div>
+
+                <div class="flex-item overscroll">
+                    <h2>Payload</h2>
+
+                    <h3>Fairing</h3>
+
+                    <p>
+                        Made of a carbon composite material, the fairing protects satellites on their way to orbit. 
+                        The fairing is jettisoned approximately 3 minutes into flight, and SpaceX continues to recover fairings 
+                        for reuse on future missions.
+                    </p>
+
+                    <figure>
+                        <img src="images/fairing_actual.png">
+                        <figcaption>Falcon 9's Default Fairing</figcaption>
+                    </figure>
+
+                    <h3>Dragon</h3>
+
+                    <p>
+                        Dragon is capable of carrying up to 7 people and/or cargo in the spacecraft’s pressurized section. In addition, 
+                        Dragon can carry cargo in the spacecraft’s unpressurized trunk, which can also accommodate secondary payloads.
+                    </p>
+
+                    <figure>
+                        <img src="images/dragon_actual.png">
+                        <figcaption>Falcon 9's Dragon Module</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="flex-container snap-point">
+                <div class="flex-item" style="flex-basis: 100%;">
+
+                </div>
+                <div class="flex-item video-holder" id="falcon-9-video-holder">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4TXCZG_NEY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+                </div>
+            </article>
+        </main>
+
+        <aside id="inquiries">
+            <p>
+                For media enquiries, please reach out to media@spacex.com on email.
+                <br>
+                For more information about trademarks, copyrights and other IP at SpaceX, click <a href=https://www.spacex.com/trademark>here</a>
+            </p>
+        </aside>
+        
+        <footer class="snap-point underline" id="social-media">
+            <a href="">&#169SpaceX2020</a>
+            <a href="https://twitter.com/spacex" target="_blank">Twitter</a>
+            <a href="https://www.youtube.com/spacex" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/spacex/" target="_blank">Instagram</a>
+            <a href="https://www.flickr.com/photos/spacex" target="_blank">Flickr</a>
+            <a href="https://linkedin.com/company/spacex" target="_blank">LinkedIn</a>
+            <a href="https://www.spacex.com/media/privacy_policy_spacex.pdf" target="_blank">Privacy Policy</a>
+        </footer>
+    </body>
+</html>
