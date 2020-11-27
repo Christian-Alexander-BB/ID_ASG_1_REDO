@@ -1,4 +1,12 @@
-/* Custom Fonts */
+/* Notes:
+- margin: auto; centers blocks
+- height: auto; with manual width gives a more responsive website than width: auto; with manual height or all auto
+- "vmin" units set the block such that it is relative to the smaller side of the viewport. E.g. On computers, it will be relative to
+  the height and on phones it will be relative to the length */
+
+
+/* Section: Custom Fonts */
+
 
 @font-face {
     font-family: 'Calibri Light';
@@ -10,7 +18,10 @@
     src: url(../fonts/simplifica_typeface.ttf)
 }
 
-/* Universal Classes And Styling */
+
+/* Section: Classes And Styling */
+
+/* The following 9 blocks set up the default characteristics of certain tags */
 
 html {
     scroll-snap-type: y proximity; /* Activates scroll-snapping in the page, which allows users to "snap" to certain areas when scrolling */
@@ -43,6 +54,7 @@ h2 {
     font-size: 2em;
 }
 
+
 h3 {
     font-size: 1.5em;
 }
@@ -63,7 +75,7 @@ table {
     color: #f2f2f2;
 
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Lets table borders be collapsed into a single border instead of being separated, which is the default */
 
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1em;
@@ -72,8 +84,8 @@ table {
     letter-spacing: 0.015em;
 }
 
+
 td {
-    /* border: 1px solid #b3e3ff; */
     padding: 1%;
 }
 
@@ -82,8 +94,7 @@ p {
     color: #f2f2f2;
 
     font-family: 'Open Sans', sans-serif;
-    /* font-size: 1.1em; */
-    font-size: 18px;
+    font-size: 1.1em;
 
     line-height: 2;
     letter-spacing: 0.015em;
@@ -91,6 +102,7 @@ p {
 
 
 /* The following 3 blocks set up flex containers and flex items */
+
 .flex-container {
     display: flex;
     width: 100%;
@@ -99,11 +111,11 @@ p {
     align-items: center;
     align-content: space-around;
     justify-content: center;
-    min-height: 100vh; /* Makes each section exactly the height of the viewport */
+    min-height: 100vh; /* Makes each section exactly the height of the viewport, unless there is too much content */
 }
 
 .flex-item {
-    flex: 1 36%; /* Default section is 55% image, 36% words, and 2% padding for each item */
+    flex: 1 36%; /* Default flex-container is 55% image, 36% text, and 2% padding for each item */
     flex-direction: row;
 
     padding: 2%;
@@ -118,6 +130,7 @@ p {
 
 .image-beside-text {
     /* Sets up what happens if image is beside text (default) */
+
     flex-basis: 55%;
 
     padding-top: 0%;
@@ -126,12 +139,12 @@ p {
 
 
 .tall-image {
+    /* Sets up what happens if image is beside text and the image height is longer than its width */
+
     flex-basis: 10%;
 
     padding-top: 0%;
     padding-bottom: 0%;
-
-    /* border: 2px solid red; */
 }
 
 
@@ -142,7 +155,8 @@ p {
 
 
 /* The following 5 blocks of .underline > a sets up the line animation when hovering and attributes of the <a> tag. 
-    Referenced in README file */
+    Source referenced in README.md file */
+
 .underline > a:link {
     /* Default color of words */
 
@@ -152,18 +166,19 @@ p {
 
 .underline > a:after {
     /* "after" inserts something after the selected content. In this case, the <a> tag */
+    /* This line activates when you release the link from hover. */
 
-    content: ''; /* Displays nothing after the words in the <a> tag. */ 
+    content: ''; /* Displays nothing after the words in the <a> tag */ 
     display: block;
     position: absolute;
 
-    width: 0; 
+    width: 0; /* Makes sure no line appears below words before you hover over it */
     height: 0.1vmin; /* Height of the line */
 
     margin-top: 1px; /* Sets how far the line is from the words */
-    right: 0;
-    background: #fff;
-    transition: width .25s ease;
+    right: 0; /* Makes sure that the line does not go too much to the right */
+    background: red; /* Sets up the line color when you release from hovering */
+    transition: width .25s ease; /* Sets up the type of transition and duration of transition */
 }
 
 .underline > a:visited {
@@ -177,8 +192,8 @@ p {
 }
 
 .underline > a:hover:after {
-    /* The bottom attributes are inserted after the words in the <a> tag when hovering */
-
+    /* "after" inserts something after the selected content. In this case, the <a> tag */
+    /* This line activates when you start hovering over the link. */
     color: #f2f2f2;
     background: #fff;
 
@@ -188,6 +203,7 @@ p {
 
 
 /* The following block sets up the buttons, specifically "Find Out More" */
+
 .secondary-link-holder {
     width: 30%;
     height: auto;
@@ -207,6 +223,7 @@ p {
 
 
 /* The following 2 blocks make links relative to .underline > a, allowing the animations to activate */
+
 a.secondary-link {
     position: relative;
 }
@@ -222,6 +239,7 @@ h2 > a {
 
 
 /* The following 3 blocks set up the positioning and styling of videos */
+
 .video-holder {
     position: relative;
     overflow: hidden;
@@ -233,6 +251,8 @@ h2 > a {
 }
 
 .video {
+    /* Makes sure the video fills up the entire flex-item. Source referenced in README.md file */
+
     position: absolute;
     top: 0;
     left: 0;
@@ -249,6 +269,7 @@ h2 > a {
 
 
 /* The following 3 blocks set up the top navigation bar */
+
 .topnav {
     display: inline-flex;
     width: 92%;
@@ -263,19 +284,21 @@ h2 > a {
 
 .topnav > div > a {
     position: relative;
+
     padding: 0% !important;
     margin: 0 !important;
+
     flex-basis: 2%;
+
     font-size: 1.5em;
     font-family: "Calibri Light";
 }
 
 .logo {
-    flex-basis: 1%;
-    /* border: 2px solid red; */
-
-    margin: 0;
     padding-left: 10%;
+    margin: 0;
+    
+    flex-basis: 1%;
 
     z-index: 0;
 }
@@ -283,13 +306,18 @@ h2 > a {
 
 .logo-image {
     display: block;
+
     margin-left: auto;
     margin-right: auto;
+
     width: 15vw !important;
+
     z-index: 0;
 
 }
 
+
+/* The following 4 blocks of code change headers and links to a red color for the Falcon Heavy page */
 
 .red > div > h2, .red > div > h3 {
     color: rgb(223, 23, 23);
@@ -309,23 +337,34 @@ h2 > a {
 
 
 /* The following code customized the scroll bar */
+
 ::-webkit-scrollbar {
+    /* Sets up the entire scrollbar */
+
     width: 12px;
 }
 
 ::-webkit-scrollbar-track {
+    /* Sets up the scrollbar background color */
+
     background: rgb(23, 25, 32);
 }
 
 ::-webkit-scrollbar-thumb {
+    /* Sets up the scrollbar thumb color and size */
+
     background: #45a2d8;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #63b0dd;
+    /* Sets up the scrollbar thumb color when hovering */
+
+    background: #78c8f7;
 }
 
+
+/* The following 2 blocks set up the nested scroll */
 
 .overscroll {
     overflow: scroll; 
@@ -339,7 +378,8 @@ h2 > a {
     padding-top: 4.5%;
 }
 
-/* IDs used in multiple pages */
+
+/* Section: IDs used in multiple pages */
 
 
 #intro {
@@ -359,7 +399,7 @@ h2 > a {
 }
 
 
-/* index.html IDs */
+/* Section: index.html IDs */
 
 
 #starlink-description {
@@ -431,7 +471,7 @@ h2 > a {
 }
 
 
-/* falcon-9.html IDs */
+/* Section: falcon-9.html IDs */
 
 
 #falcon-9 {
@@ -497,7 +537,7 @@ h2 > a {
 }
 
 
-/* falcon-heavy.html IDs */
+/* Section: falcon-heavy.html IDs */
 
 
 #falcon-heavy {
