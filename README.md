@@ -16,9 +16,10 @@ User stories:
 - As an aerospace organization, we want to be able to make people more interested in space travel in order to make this industry more
   prevalent and popular.
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
-These files should themselves either be included as a pdf file in the project itself (in an separate directory)
-Include the Adobe XD wireframe as a folder. You can include the XD share url. 
+Adobe XD links:
+- Page 1: https://xd.adobe.com/view/d38d0cf6-cdb0-45dc-be20-7327b93ae5dc-86de/
+- Page 2: https://xd.adobe.com/view/21d5e4e1-64ca-481f-90cb-03cb71bbae4d-7486/
+- Page 3: https://xd.adobe.com/view/929fee92-a762-4d08-a325-59c05bf0a637-c7cc/
 
 
 ## Features
@@ -74,7 +75,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [HTML](https://html.com)
     - The project uses **HTML** to create the basic structure of pages
 
--[CSS](http://www.css3.com)
+- [CSS](http://www.css3.com)
     - The project uses **CSS** to style the website and position elements.
 
 
@@ -86,7 +87,14 @@ None
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- https://en.wikipedia.org/wiki/SpaceX
+- https://en.wikipedia.org/wiki/Starlink
+- https://www.space.com/spacex-starlink-11-satellites-launch-september-2020.html
+- https://en.wikipedia.org/wiki/SpaceX_Mars_program
+- https://www.spacex.com/vehicles/falcon-heavy/
+- https://en.wikipedia.org/wiki/Falcon_9
+- https://en.wikipedia.org/wiki/Falcon_Heavy#Maiden_flight
+
 
 ### Media (Images)
 - Falcon 9 rocket: https://preview.redd.it/2htktinvpix01.png?width=960&crop=smart&auto=webp&s=30895298df721c8307ca23b97efc434fd1a0dcda
@@ -124,3 +132,4 @@ None
 - Customize Scroll Bar: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
 - Extra Spacing Between Words: https://www.computerhope.com/issues/ch001662.htm
 - Nested Scrollbar: https://www.w3schools.com/cssref/pr_pos_overflow.asp
+- Collapse Border: https://www.w3schools.com/cssref/pr_border-collapse.asp
