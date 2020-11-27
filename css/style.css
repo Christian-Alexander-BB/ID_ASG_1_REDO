@@ -82,7 +82,8 @@ p {
     color: #f2f2f2;
 
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.1em;
+    /* font-size: 1.1em; */
+    font-size: 18px;
 
     line-height: 2;
     letter-spacing: 0.015em;
@@ -250,11 +251,11 @@ h2 > a {
 /* The following 3 blocks set up the top navigation bar */
 .topnav {
     display: inline-flex;
-    width: 100%;
+    width: 92%;
 
     align-items: center;
     align-content: center;
-    justify-content: space-around;
+    justify-content: center;
 
     text-align: center;
     z-index: 1;
@@ -284,7 +285,7 @@ h2 > a {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 12vw !important;
+    width: 15vw !important;
     z-index: 0;
 
 }
@@ -596,5 +597,10 @@ h2 > a {
     #description > p {
         color: black;
         font-weight: bold;
+    }
+
+    #dark-background {
+        background-color: black;
+        color: #f2f2f2 !important;
     }
 }
